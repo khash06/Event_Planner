@@ -1,0 +1,61 @@
+<! doctyle <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h2>Dojo Activity Center</h2>
+    <h4>Welcome, @ViewBag.name</h4>
+    <a href="LogOff">Log Off</a>
+    <table class="table table-striped">
+        <tr>
+            <th>Activity</th>
+            <th>Date and Time</th>
+            <th>Duration</th>
+            <th>Event Coordinator</th>
+            <th>Number of Participants</th>
+            <th>Actions</th>
+        </tr>
+        @foreach(var data in @ViewBag.titles){
+            bool flag= false;
+            @foreach(var guest in @data.Reserver){
+                if(guest.UserId == ViewBag.UserID){
+                    flag = true;
+                }
+            }
+    
+            
+        
+        <tr>
+            <td><a href="Home/ActivitiesPage/@data.ActivitiesId">@data.Title</a></td>
+            <td>@data.Date.ToString("yyyy-MM-dd") at @data.StartTime</td>
+            <td>@data.Duration @data.HrMin</td>
+            <td>@data.Creator</td>
+        
+            <td>@data.Participants</td>
+            
+            @if(ViewBag.UserID == @data.Creator){
+            <td><a href="/Delete/@data.ActivitiesId">Delete</a></td>
+            }
+            else if(flag == true){
+                <td><a href="/leave/@data.ActivitiesId">Leave</a></td>
+            }
+            else
+            {
+                <td><a href="/join/@data.ActivitiesId">Join</a></td>
+            }
+        </tr>
+        
+    }   
+    </table>
+    
+    <form action="AddActivity" method="get">
+        <input type="submit" value="Add New Activity!">
+    </form>
+</body>
+</html>

@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using Belt.Models
+@model User
+
+<! doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h2>Registration</h2>
+    <div class="container" style="max-width: 400px; margin:10px auto;">
+        <form asp-action="Register" asp-controller="Home" method="POST" role="form">
+            <div class="form-group row">
+                <span asp-validation-for="FirstName"></span>
+                <label asp-for="FirstName">First Name:</label>
+                <input asp-for="FirstName" type="text" class="form-control">
+            </div>
+
+            <div class="form-group row">    
+                <span asp-validation-for="LastName"></span>
+                <label asp-for="LastName">Last Name:</label>
+                <input asp-for="LastName" type="text" class="form-control">
+            </div>
+
+            <div class="form-group row">
+                <span asp-validation-for="Email"></span>
+                <span>@ViewBag.message</span>
+                <label asp-for="Email">Email:</label>
+                <input asp-for="Email" type="email" class="form-control">
+            </div>
+
+            <div class="form-group row">    
+                <label asp-for="Password">Password:</label>
+                <input asp-for="Password" type="password" class="form-control">
+                <span asp-validation-for="Password"></span>
+            </div>
+
+            <div class="form-group row">
+                <span asp-validation-for="C_Password"></span>
+                <label asp-for="C_Password">Confirm Password:</label>
+                <input asp-for="C_Password" type="password" class="form-control">
+            </div>
+
+                <input type="submit" value="Register" class="btn btn-primary">
+
+        </form>
+    </div>    
+    <h2>LogIn</h2>
+    <div class="container" style="max-width: 400px; margin:10px auto;">
+        <form asp-action="Login" asp-controller="Home" method="POST" role="form">
+            <div class="form-group row">
+                <span asp-validation-for="Email"></span>
+                <label asp-for="Email">Email:</label>
+                <input asp-for="Email" type="email" class="form-control">
+            </div>
+            <div class="form-group row">    
+                <span asp-validation-for="Password"></span>
+                <label asp-for="Password">Password:</label>
+                <input asp-for="Password" type="password" class="form-control">
+            </div>
+                <span>@ViewBag.login</span>
+
+                <input type="submit" value="Login" class="btn btn-primary">
+        </form>    
+    </div>    
+</body>
+</html>

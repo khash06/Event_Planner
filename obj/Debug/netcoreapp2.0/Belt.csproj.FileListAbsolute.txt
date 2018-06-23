@@ -1,0 +1,11 @@
+/Users/keishihashimoto/Desktop/DojoAssignments/netCore/Belt/bin/Debug/netcoreapp2.0/Belt.deps.json
+/Users/keishihashimoto/Desktop/DojoAssignments/netCore/Belt/bin/Debug/netcoreapp2.0/Belt.runtimeconfig.json
+/Users/keishihashimoto/Desktop/DojoAssignments/netCore/Belt/bin/Debug/netcoreapp2.0/Belt.runtimeconfig.dev.json
+/Users/keishihashimoto/Desktop/DojoAssignments/netCore/Belt/bin/Debug/netcoreapp2.0/Belt.dll
+/Users/keishihashimoto/Desktop/DojoAssignments/netCore/Belt/bin/Debug/netcoreapp2.0/Belt.pdb
+/Users/keishihashimoto/Desktop/DojoAssignments/netCore/Belt/obj/Debug/netcoreapp2.0/Belt.csprojResolveAssemblyReference.cache
+/Users/keishihashimoto/Desktop/DojoAssignments/netCore/Belt/obj/Debug/netcoreapp2.0/Belt.csproj.CoreCompileInputs.cache
+/Users/keishihashimoto/Desktop/DojoAssignments/netCore/Belt/obj/Debug/netcoreapp2.0/Belt.AssemblyInfoInputs.cache
+/Users/keishihashimoto/Desktop/DojoAssignments/netCore/Belt/obj/Debug/netcoreapp2.0/Belt.AssemblyInfo.cs
+/Users/keishihashimoto/Desktop/DojoAssignments/netCore/Belt/obj/Debug/netcoreapp2.0/Belt.dll
+/Users/keishihashimoto/Desktop/DojoAssignments/netCore/Belt/obj/Debug/netcoreapp2.0/Belt.pdb
